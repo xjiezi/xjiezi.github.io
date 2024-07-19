@@ -45,17 +45,17 @@ export default {
   // 关于页二维码
   alipay_qr: '//cdn.wallleap.cn/img/custom/donate/alipayQr.jpg',
   // GitHub Issues 配置
-  username: 'wallleap',
-  repository: 'myblogs',
+  username: 'goofish-shop',
+  repository: 'ethereal',
   friendsRepo: 'friends',
   // 您的信息
   author: 'Luwang',
   email: 'luwang@oicode.cn',
   link: '//luwang.info',
-  github: '//github.com/wallleap',
+  github: '//github.com/goofish-shop/ethereal',
   // 友链信息
   name: 'wallleap',
-  url: '//myblog.wallleap.cn',
+  url: '//goofish-shop.github.io/ethereal',
   avatar: '//gravatar.wallleap.cn/avatar/be1ccdcf025a92b98a92e331e1b3662a?size=256',
   desc: 'Luwang\'s blog',
   // 文章相关
@@ -66,7 +66,7 @@ export default {
   // 评论配置
   utterances: {
     code: `<script src="https://utteranc.es/client.js"
-      repo="wallleap/comments"
+      repo="goofish-shop/comments"
       issue-term="title"
       label="Comment"
       theme="github-light"
