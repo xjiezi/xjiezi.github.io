@@ -37,6 +37,25 @@ jobs:
       
       - name: Build
         run: pnpm run build
+
+      # - name: Deploy
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   with:
+      #     personal_token: ${{ secrets.TWIKOO_ID }}
+      #     external_repository: wallleap/wallleap.github.io
+      #     publish_branch: master
+      #     user_name: wallleap
+      #     user_email: 15579576761@163.com
+      #     commit_message: ${{ github.event.head_commit.message }}
+      #     full_commit_message: ${{ github.event.head_commit.message }}
+      #     publish_dir: ./dist
+      #     force_orphan: true
+      #     allow_empty_commit: true
+      #     # cname: myblog.wallleap.cn
+      # - name: Get the output
+      #   run: |
+      #     echo "${{ steps.deploy.outputs.notify }}"
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.4.2
         with:
@@ -44,4 +63,3 @@ jobs:
           folder: dist
           clean: true
           single-commit: true
-         
