@@ -1,0 +1,84 @@
+@mixin scrollBar {
+  & {
+    overflow: overlay;
+  }
+
+  &::-webkit-resizer, &::-webkit-scrollbar-corner,
+  &::-webkit-scroll-track, &::-webkit-scrollbar-button,
+  &::-webkit-scrollbar-track-piece {
+    display: none;
+  }
+
+  &::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+    border-radius: 9px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--weak);
+    border-radius: 6px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    &:hover {
+      background-color: var(--minor);
+    }
+  }
+}
+
+@mixin xs-layout {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin sm-layout {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin type-area {
+  @media screen and (max-width: 876px) {
+    @content;
+  }
+}
+
+@mixin md-layout {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin lg-layout {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin xl-layout {
+  @media screen and (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin xxl-layout {
+  @media screen and (min-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin box-shadow {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  :root[data-theme="dark"] & {
+    box-shadow: 0 0 10px 0 rgba(136, 136, 136, 0.5);
+  }
+}
+
+@mixin modal-mask {
+  position: fixed;
+  inset: 0;
+  background-color: var(--bg-mask);
+  z-index: 99;
+}

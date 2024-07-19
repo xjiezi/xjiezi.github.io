@@ -1,0 +1,305 @@
+.about-wrap {
+  margin: 0 auto;
+  margin-top: 4em;
+  width: 100%;
+  max-width: 876px;
+  
+  .about {
+    width: 100%;
+    padding: 2rem;
+    background-color: var(--bg-thin);
+    border-radius: 2em;
+
+    .about-content {
+      position: relative;
+    }
+
+    .like {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 2em;
+      padding: 1em;
+      background-color: var(--bg-weak);
+      border-radius: 1em;
+
+      .like-img {
+        height: 200px;
+
+        img {
+          height: 100%;
+        }
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-width: 300px;
+      }
+
+      h2 {
+        margin-bottom: .3em;
+        font-size: 1.4rem;
+      }
+
+      .like-btn {
+        position: relative;
+        margin-top: .5em;
+        width: 120%;
+        font-size: 2rem;
+        cursor: pointer;
+        
+        svg {
+          transition: .3s;
+        }
+
+        &:hover {
+          svg {
+            transform: scale(1.2);
+          }
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0;
+          height: 0;
+          border: 1rem solid transparent;
+          border-bottom-color: #FDD7B8;
+        }
+
+        &::after {
+          content: attr(data-text);
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          margin-top: 1em;
+          padding: .2em 1em;
+          border-radius: 5px;
+          font-size: .76rem;
+          color: #653014;
+          background: linear-gradient(135deg, #FFEED5 0%, #FDCAAE 100%);
+        }
+      }
+
+      .alipay-qr {
+        height: 200px;
+        border-radius: .8em;
+        overflow: hidden;
+
+        img {
+          height: 100%;
+        }
+      }
+
+      @include sm-layout {
+        flex-direction: column;
+        gap: 1em;
+
+        .like-img {
+          height: 100px;
+        }
+
+        .alipay-qr {
+          margin-top: 2.2em;
+          width: 100%;
+          height: auto;
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    ::v-deep .markdown {
+      min-height: 200px;
+
+      svg {
+        width: 1.2em;
+        height: 1.2em;
+        vertical-align: -5px;
+      }
+    }
+
+    section {
+      &:not(:last-child) {
+        margin-bottom: 2em;
+      }
+
+      p {
+        &:not(:last-child) {
+          margin-bottom: .4em;
+        }
+
+        &.strong {
+          position: relative;
+          padding-left: .6em;
+          font-size: 1.2rem;
+          font-weight: bold;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            width: 4px;
+            height: 1em;
+            border-radius: 4px;
+            background-color: var(--accent);
+          }
+        }
+      }
+
+      .content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .8em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        font-size: 1rem;
+        color: var(--accent);
+
+        li {
+          width: calc(100% /3 - 8.6px);
+          
+          .info {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-height: 86px;
+            padding: 1em;
+            background-color: var(--bg-weak);
+            border-radius: .5em;
+            overflow: hidden;
+            transition: .4s ease;
+
+            .avatar {
+              flex-shrink: 0;
+              width: 56px;
+              height: 56px;
+              border-radius: 50%;
+              overflow: hidden;
+              transition: .3s ease;
+
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+
+            .text {
+              flex: 1;
+              width: calc(100% - 56px - 1em);
+              margin-left: 1em;
+
+              .name {
+                margin-bottom: .2em;
+                font-size: 1rem;
+                font-weight: bold;
+                color: var(--accent);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                transition: .4s ease;
+              }
+
+              .desc {
+                font-size: .8rem;
+                line-height: 1.3;
+                color: var(--minor);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                transition: .4s ease;
+                transition-delay: .08s;
+              }
+            }
+
+            &:hover {
+              .text {
+                width: 100%;
+                .name {
+                  color: var(--primary);
+                }
+                .name, .desc {
+                  transform: translateX(-70px);
+                  width: 100%;
+                }
+              }
+              .avatar {
+                opacity: 0;
+                transform: translate(-70px, -70px);
+              }
+            }
+          }
+        }
+      }
+
+      .not-added {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: .8em;
+        margin-top: .8em;
+        margin-bottom: 1em;
+
+        li {
+          padding: .4em 1em;
+          background-color: var(--bg-weak);
+          border-radius: .5em;
+          
+          .name {
+            font-size: .8rem;
+          }
+        }
+      }
+    }
+  
+    h2 {
+      margin-bottom: .8em;
+      font-size: 1.2rem;
+      line-height: 1.4;
+      font-weight: bold;
+      color: var(--accent);
+    }
+  }
+
+  @include type-area {
+    & {
+      padding-left: 9px;
+
+    .about {
+        section {
+          .content {
+            li {
+              width: calc(100% /2 - 6.4px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include xs-layout {
+    .about {
+      section {
+        .content {
+          li {
+            width: calc(100%);
+          }
+        }
+      }
+    }
+  }
+}

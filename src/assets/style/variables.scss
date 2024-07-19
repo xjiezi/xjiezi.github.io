@@ -1,0 +1,118 @@
+/* <html data-theme="default"> */
+:root {
+  /* colors */
+  --primary-h: 218;
+  --primary-s: 95;
+  --primary-l: 46;
+  --primary-rgb: 6, 88, 229;
+  --primary: rgb(var(--primary-rgb));
+  --secondary: #FA931E;
+  --secondary-rgb: 250, 147, 30;
+  --tertiary: #4B65AF;
+  --tertiary-rgb: 75, 101, 175;
+  --success: #009154;
+  --success-rgb: 0, 145, 84;
+  --danger: #f01f11;
+  --danger-rgb: 255, 89, 120;
+  --warning: #FEC900;
+  --warning-rgb: 254, 201, 0;
+  --info: #00C9F3;
+  --info-rgb: 0, 201, 243;
+  --white: #fff;
+  --accent: hsl(var(--primary-h), 25%, 15%);
+  --major: hsl(var(--primary-h), 12%, 35%);
+  --minor: hsl(var(--primary-h), 8%, 50%);
+  --weak: hsl(var(--primary-h), 6%, 65%);
+  --thin: hsl(var(--primary-h), 4%, 80%);
+  /* background */
+  --bg-thin: var(--white);
+  --bg-weak: hsl(var(--primary-h), 4%, 98%);
+  --bg-major: hsl(var(--primary-h), 4%, 96%);
+  --bg-minor: hsl(var(--primary-h), 5%, 90%);
+  --bg-mask: rgba(0, 0, 0, 0.5);
+  /* font-family */
+  --font-hei: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+  --font-kai: Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+  --font-song: Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
+  --font-fang-song: Baskerville, "Times New Roman", "Liberation Serif", STFangsong, FangSong, FangSong_GB2312, "CWTEX\-F", serif;
+  /* font-size */
+  --fz-base: 16;
+  --fz-xs: calc(var(--fz-base) - 2);
+  --fz-sm: calc(var(--fz-base) - 1);
+  --fz-md: calc(var(--fz-base) + 2);
+  --fz-lg: calc(var(--fz-base) + 6);
+  --fz-xl: calc(var(--fz-base) + 12);
+  --fz-xxl: calc(var(--fz-base) + 18);
+  /* line-height */
+  --lh-single: 1.2em;
+  --lh-paragraph: 1.6em;
+  /* space between */
+  --gap-base: 8;
+  --gap-xs: calc(var(--gap-base) * 2);
+  --gap-sm: calc(var(--gap-base) * 3);
+  --gap-md: calc(var(--gap-base) * 4);
+  --gap-lg: calc(var(--gap-base) * 6);
+  --gap-xl: calc(var(--gap-base) * 8);
+  --gap-xxl: calc(var(--gap-base) * 10);
+  /* border-radius */
+  --rounded-xs: 4;
+  --rounded-sm: calc(var(--rounded-xs) + 4);
+  --rounded-md: calc(var(--rounded-sm) + 4);
+  --rounded-lg: calc(var(--rounded-md) + 4);
+  --rounded-xl: calc(var(--rounded-lg) + 4);
+  --rounded-xxl: calc(var(--rounded-xl) + 4);
+  /* break pointers */
+  --xs: 0;
+  --sm: 576px;
+  --md: 768px;
+  --lg: 992px;
+  --xl: 1200px;
+  --xxl: 1400px;
+  /*赛贝尔曲线 Cubic-bezier() */
+  --naturally: 0.48, 0.33, 0.24, 0.95;
+}
+
+/* <html data-theme="dark"> */
+:root[data-theme="dark"] {
+  /* colors */
+  --primary-h: 218;
+  --primary-s: 100;
+  --primary-l: 65;
+  --primary-rgb: 79, 144, 255;
+  --primary: rgb(var(--primary-rgb));
+  --secondary: #FA931E;
+  --secondary-rgb: 250, 147, 30;
+  --tertiary: #4B65AF;
+  --tertiary-rgb: 75, 101, 175;
+  --success: #009154;
+  --success-rgb: 0, 145, 84;
+  --danger: rgb(255, 89, 120);
+  --danger-rgb: 255, 89, 120;
+  --warning: #FEC900;
+  --warning-rgb: 254, 201, 0;
+  --info: #00C9F3;
+  --info-rgb: 0, 201, 243;
+  --accent: var(--white);
+  --major: hsl(var(--primary-h), 4%, 90%);
+  --minor: hsl(var(--primary-h), 4%, 80%);
+  --weak: hsl(var(--primary-h), 5%, 72%);
+  --thin: hsl(var(--primary-h), 6%, 65%);
+  /* background */
+  --bg-weak: hsl(var(--primary-h), 30%, 10%);
+  --bg-minor: hsl(var(--primary-h), 20%, 15%);
+  --bg-major: hsl(var(--primary-h), 18%, 20%);
+  --bg-thin: hsl(var(--primary-h), 16%, 25%);
+  --bg-mask: rgba(0, 0, 0, 0.8);
+}
+
+.variables-test {
+  /* 直接使用 */
+  color: var(--primary);
+  /* 搭配其他函数使用 */
+  background-color: rgba(var(--primary-rgb), .1);
+  /* 有单位的直接使用 */
+  border-width: 1px;
+  border-style: solid;
+  /* 可以进行计算 需要单位就乘 1 单位 */
+  border-color: hsl(calc(var(--primary-h)), calc(var(--primary-s) * 1%), calc((var(--primary-l) + 10) * 1%));
+}

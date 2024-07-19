@@ -1,0 +1,57 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: create env file
+        run: |
+          touch .env
+          echo VITE_GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }} >> .env
+          echo VITE_TWIKOO_ID: ${{ secrets.VITE_TWIKOO_ID }} >> .env
+          echo VITE_LEANCLOUD_ID: ${{ secrets.VITE_LEANCLOUD_ID }} >> .env
+          echo VITE_LEANCLOUD_KEY: ${{ secrets.VITE_LEANCLOUD_KEY }} >> .env
+          echo VITE_LEANCLOUD_SERVER: ${{ secrets.VITE_LEANCLOUD_SERVER }} >> .env
+      
+      - name: Build
+        run: pnpm run build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          external_repository: wallleap/wallleap.github.io
+          publish_branch: master
+          user_name: wallleap
+          user_email: 15579576761@163.com
+          commit_message: ${{ github.event.head_commit.message }}
+          full_commit_message: ${{ github.event.head_commit.message }}
+          publish_dir: ./dist
+          force_orphan: true
+          allow_empty_commit: true
+          cname: myblog.wallleap.cn
+      - name: Get the output
+        run: |
+          echo "${{ steps.deploy.outputs.notify }}"
