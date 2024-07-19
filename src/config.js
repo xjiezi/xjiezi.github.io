@@ -42,17 +42,17 @@ export default {
   icpLink: '//beian.miit.gov.cn/',
   beian: '',
   beianLink: '',
-  // 关于页二维码
+  // 关于页二维码 /xjiezi/xjiezi.github.io
   alipay_qr: '//cdn.wallleap.cn/img/custom/donate/alipayQr.jpg',
   // GitHub Issues 配置
-  username: 'goofish-shop',
-  repository: 'ethereal',
+  username: 'xjiezi',
+  repository: 'xjiezi.github.io',
   friendsRepo: 'friends',
   // 您的信息
   author: 'Luwang',
   email: 'luwang@oicode.cn',
   link: '//luwang.info',
-  github: '//github.com/goofish-shop/ethereal',
+  github: '//github.com/xjiezi/xjiezi.github.io',
   // 友链信息
   name: 'wallleap',
   url: '//goofish-shop.github.io/ethereal',
