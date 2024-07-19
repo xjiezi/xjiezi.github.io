@@ -30,7 +30,7 @@
 
 export default {
   // 博客基础配置
-  title: 'wallleap',
+  title: 'xjiezi',
   subtitle: 'ルー・ワン',
   description: 'Luwang\'s blog',
   keywords: 'Luwang, blog, wallleap',
@@ -54,8 +54,8 @@ export default {
   link: '//luwang.info',
   github: '//github.com/xjiezi/xjiezi.github.io',
   // 友链信息
-  name: 'wallleap',
-  url: '//goofish-shop.github.io/ethereal',
+  name: 'xjiezi',
+  url: '//github.com/xjiezi/xjiezi.github.io',
   avatar: '//gravatar.wallleap.cn/avatar/be1ccdcf025a92b98a92e331e1b3662a?size=256',
   desc: 'Luwang\'s blog',
   // 文章相关
@@ -64,16 +64,16 @@ export default {
   // 图片加载失败时显示，请将图片下载至你自己的存储空间，并使用自己的 CDN 引入
   errorImg: '//cdn.wallleap.cn/img/pic/cover/image_processing20200524-7638-6itpxj.gif',
   // 评论配置
-  utterances: {
-    code: `<script src="https://utteranc.es/client.js"
-      repo="goofish-shop/comments"
-      issue-term="title"
-      label="Comment"
-      theme="github-light"
-      crossorigin="anonymous"
-      async>
-    </script>`,
-  },
+  // utterances: {
+  //   code: `<script src="https://utteranc.es/client.js"
+  //     repo="goofish-shop/comments"
+  //     issue-term="title"
+  //     label="Comment"
+  //     theme="github-light"
+  //     crossorigin="anonymous"
+  //     async>
+  //   </script>`,
+  // },
   twikoo: {
     src: '//cdn.staticfile.org/twikoo/1.6.22/twikoo.all.min.js',
   },
