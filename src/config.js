@@ -46,7 +46,7 @@ export default {
   alipay_qr: '//cdn.wallleap.cn/img/custom/donate/alipayQr.jpg',
   // GitHub Issues 配置
   username: 'xjiezi',
-  repository: 'xjiezi.github.io',
+  repository: 'blog',
   friendsRepo: 'friends',
   // 您的信息
   author: 'Luwang',
